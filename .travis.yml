@@ -1,0 +1,14 @@
+language: c
+
+compiler:
+  - gcc
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+install:
+  - echo  "Reached Install Section"
+
+script:
+  - echo "Reached Script Section"
+  - gcc   	Linkfile_multifile/demofile2.c Linkfile_multifile/file1.c  	Linkfile_multifile/file2.c -o output
+  - ./output
