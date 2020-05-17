@@ -17,12 +17,13 @@ before_install:
   - export C_INCLUDE_PATH=$TRAVIS_BUILD_DIR/include:$C_INCLUDE_PATH
   - export LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LIBRARY_PATH
   - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
-  #- cd ..
+  - cd ..
   #- cd c
 install:
   - echo  "Reached Install Section"
 
 script:
+  - pwd
   - echo "Reached Script Section - Multi File Compile "
   - gcc   	Linkfile_multifile/demofile2.c Linkfile_multifile/file1.c  	Linkfile_multifile/file2.c -o output
   - ./output
