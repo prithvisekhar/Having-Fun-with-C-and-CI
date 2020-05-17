@@ -3,12 +3,16 @@ language: c
 compiler:
   - gcc
 before_install:
+  - echo "Reached before install Section - cunit packages install"
   - sudo apt-get update
   - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
 install:
   - echo  "Reached Install Section"
 
 script:
-  - echo "Reached Script Section"
+  - echo "Reached Script Section - Multi File Compile "
   - gcc   	Linkfile_multifile/demofile2.c Linkfile_multifile/file1.c  	Linkfile_multifile/file2.c -o output
   - ./output
+  - echo "Reached Script Section - cunit_democode"
+  - gcc   	intial_demo_code_cunit.c -o cunit_democode
+  - ./cunit_democode
