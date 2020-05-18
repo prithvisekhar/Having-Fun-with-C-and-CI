@@ -1,3 +1,5 @@
+// Sample 
+// other alternative - http://www.shakthimaan.com/posts/2014/09/24/cunit/news.html 
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
 
