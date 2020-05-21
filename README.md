@@ -1,12 +1,43 @@
-# Having-Fun-with-C-and-CI
+# Outline
 
-## Build Status - 
-[![Build Status](https://travis-ci.org/prithvisekhar/Having-Fun-with-C-and-CI.svg?branch=master)](https://travis-ci.org/prithvisekhar/Having-Fun-with-C-and-CI)
-## Code Quality 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cde86fd1ba904284b49bc93eb8dfb09b)](https://www.codacy.com/manual/prithvisekhar/Having-Fun-with-C-and-CI?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prithvisekhar/Having-Fun-with-C-and-CI&amp;utm_campaign=Badge_Grade)
+## Discussion Points/Checklist
+* Need for dynamic memory and flexibility
+* Heap usage, API usage - malloc, calloc, realloc, free
+* Dynamic Memory for 
+  * 1D Arrays | 2D Arrays |  structure variables | array of structure variables
+* Flexible Array Member(FAM) [FAM](https://en.wikipedia.org/wiki/Flexible_array_member)
+* Memory leaks - examples 
+* Valgrind use for memory leak detection
+* Other Heap errors
+  * Read/write after free
+  * Read/write beyond heap block size
+  * Mismatch between allocation & release
+  * Invalid base address to free
+  * Double free
 
-### Initial Commit 
-- TO understand SCM and Version Control
+## Install valgrind
+* If valgrind is not installed, install thru package manager
+  ```
+  sudo apt install valgrind
+  ```
 
-## Acknowledgement
-- Reuse of Code from Rajesh and Ganesh
+## Simple Usage
+  ```
+  gcc example1.c -o ex1.out
+  valgrind ./ex1.out
+
+  gcc example3.c -o ex3.out -g
+  valgrind ./ex3.out
+  ```
+
+## Memory Leaks & Heap Analysis
+* Memory leak
+* Read/write after free
+* Read/write beyond heap block size
+* Mismatch between malloc/new, free/delete
+* Modified/Invalid base address to free
+* Double free problem
+* Direct vs Indirect memory leaks
+
+ 
+
