@@ -37,10 +37,14 @@ size hello.o                # section wise footprint
 size h.out                  # size --help
 ```
 ## Debugging
+```
 gdb- Breakpoint, stepping, print etc. 
-
+gcc demo.c -c -g
+gcc demo.o -o d.out -g
+gdb ./d.out
+```
 * [onlineGDB](https://www.onlinegdb.com/)
-
+In the IDE debug feature
 
 
 ## Code Vizualization - Ctutor 
