@@ -39,5 +39,8 @@
 * Double free problem
 * Direct vs Indirect memory leaks
 
- 
-
+Note: The example code has issue that need debugging and memory leak analysis. Recommend using -g flag of GCC for debug mode 
+ ```
+ gcc example3.c -o ex3.out -g
+ valgrind ./ex3.out
+ ```
