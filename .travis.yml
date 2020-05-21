@@ -5,7 +5,8 @@ compiler:
 before_install:
   - echo "Reached before install Section - cunit packages install"
   - sudo apt-get update
-  - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+  - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
+  - sudo apt-get -y install valgrind
  
 # #Alternative for the above step - Long 
 #  - wget http://downloads.sourceforge.net/project/cunit/CUnit/2.1-2/CUnit-2.1-2-src.tar.bz2
@@ -40,3 +41,5 @@ script:
   - gcc Cunit\ Tests/intial_demo_code_cunit.c -o cunit_democode -lcunit
   - ./cunit_democode
   - size cunit_democode
+  - echo "Reached Script Section - Valgrid Analysis/do tryout GDB also"
+  - valgrid ./output
