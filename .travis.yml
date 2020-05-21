@@ -24,11 +24,19 @@ install:
 
 script:
   - pwd
+  - echo "Reached Script Section - Basics "
+  #- gcc Basics/hello.c -E # stop with preprocess, actual tool is cpp
+  #- gcc Basics/hello.c   -S            # generate assebly code
+  #- gcc Basics/hello.s -c -o hello.o   # assemble the code
+  #- gcc Basics/hello.o -o h.out        # link, generate executable
+  #- gcc Basics/layoutdemo.c -c -o demo.o
+  #- gcc Basics/demo.o
+  #- gcc Basics/objdump -t demo.o
   - echo "Reached Script Section - Multi File Compile "
   - gcc   	Linkfile_multifile/demofile2.c Linkfile_multifile/file1.c  	Linkfile_multifile/file2.c -o output
   - ./output
   - size output
   - echo "Reached Script Section - cunit_democode"
-  - gcc   	intial_demo_code_cunit.c -o cunit_democode -lcunit
+  - gcc Cunit\ Tests/intial_demo_code_cunit.c -o cunit_democode -lcunit
   - ./cunit_democode
   - size cunit_democode
