@@ -1,24 +1,18 @@
-/** Dynamic Memory - Simple Structure*/
+#include<stdio.h>
 
-struct student {
-  int rollno;
-  char name[20];
-  int total;
-  int age;
-};
-  
-int main() {
-  struct student *ps;
-  ps=malloc(sizeof(struct student)); //calloc(1, sizeof(struct student));
-
-  ps->rollno=1001;
-  strcpy(ps->name,"John");
-  ps->total=80;
-  ps->age=20;
-
-  printf("Rollno=%d,Name=%s,Total=%lf,Age=%d\n",
-        ps->rollno, ps->name, ps->total, ps->age);
-  free(ps);
-  ps=NULL;
+int main(int argc, char* argv[]) {
+  int *parr;
+  int len=10;
+  if(argc > 1)
+    len = stroul(argv[1],NULL,10);
+  parr = malloc(len * sizeof(int));
+  srand(time(0));
+  for(int i=0;i<len;i++)
+    parr[i] = rand()%100;
+  for(int i=0;i<len;i++)
+    sum += parr[i];
+  free(parr);
+  parr[5] = 50;     
+  printf("Thank You\n");
   return 0;
-}  
+}
